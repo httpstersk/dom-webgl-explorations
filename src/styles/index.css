@@ -1,0 +1,51 @@
+:root {
+  --accent-color: #bbf01a;
+  --dark-color: #11111a;
+  --light-color: white;
+  --text-color: var(--light-color);
+  --flow-space: 1rem;
+  --title-size: calc(20vh + 20vw);
+  --marquee-size: calc(5rem + 5vw);
+  --marquee-size-reversed: calc(var(--marquee-size) * -1);
+  --hue-animation: hue 10s linear infinite reverse;
+  color-scheme: dark;
+}
+
+html,
+body,
+#__next {
+  font-family: Inter;
+  height: auto;
+  width: 100vw;
+}
+
+html {
+  scrollbar-width: thin;
+}
+
+body {
+  background-color: Canvas;
+  color: CanvasText;
+}
+
+@supports not (color-scheme: dark) {
+  body {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+  }
+}
+
+canvas {
+  touch-action: none;
+}
+
+@keyframes hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}

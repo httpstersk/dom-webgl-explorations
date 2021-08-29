@@ -1,0 +1,83 @@
+{
+  "name": "dom-webgl-explorations",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "lint": "yarn prettier && yarn eslint",
+    "eslint": "eslint --fix 'src/**/*.{js,jsx}' --ext jsconfig.json",
+    "prettier": "prettier --list-different \"./src/**/*.{js,jsx,md}\"",
+    "dev": "next dev",
+    "build": "next build",
+    "export": "EXPORT=true next build && EXPORT=true next export",
+    "analyze": "ANALYZE=true next build",
+    "start": "next start"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@react-spring/core": "^9.2.4",
+    "@react-spring/three": "^9.2.4",
+    "@react-three/a11y": "^2.1.0",
+    "@react-three/drei": "7.5.0",
+    "@react-three/fiber": "^7.0.6",
+    "@use-gesture/react": "10.0.0-beta.22",
+    "esbuild-loader": "^2.15.1",
+    "glsl-aastep": "^1.0.1",
+    "glsl-fractal-brownian-noise": "^1.1.0",
+    "glsl-noise": "^0.0.0",
+    "glsl-random": "^0.0.5",
+    "glsl-rotate": "^1.1.0",
+    "gsap": "^3.7.1",
+    "lerp": "^1.0.3",
+    "next": "^11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-gsap": "^3.2.1",
+    "react-spring": "^9.2.4",
+    "react-ssr-prepass": "^1.4.0",
+    "react-timing-hooks": "^2.0.0",
+    "react-use": "^17.2.4",
+    "styled-components": "^5.3.1",
+    "tailwindcss": "^2.2.8",
+    "three": "^0.132.2",
+    "three-stdlib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@next/bundle-analyzer": "^11.1.0",
+    "@types/node": "^16.7.5",
+    "@types/react": "^17.0.19",
+    "autoprefixer": "^10.3.3",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-glsl": "^1.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.9.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.25.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-tailwind": "^0.2.1",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
+    "lint-staged": "^11.1.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-offline": "^5.0.5",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "raw-loader": "^4.0.2",
+    "typescript": "^4.4.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.51.1"
+  }
+}
