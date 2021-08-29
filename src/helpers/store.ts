@@ -16,21 +16,13 @@ export const initialState: IZustandState = {
   viewport: { x: 0, y: 0 },
 };
 
-const useStore = create<IZustandState>((set: SetState<IZustandState>) => {
-  return {
-    ...initialState,
-  };
-});
-
 export const top = createRef();
 
-export const initializeStore = (preloadedState = {}) =>
-  create((set, get) => {
-    return {
-      ...initialState,
-      ...preloadedState,
-    };
-  });
+const initializeStore = (preloadedState = {}) =>
+  create((set, get) => ({
+    ...initialState,
+    ...preloadedState,
+  }));
 
 export function useHydrate(initialState) {
   let _store = store ?? initializeStore(initialState);
@@ -54,5 +46,9 @@ export function useHydrate(initialState) {
 
   return _store;
 }
+
+const useStore = create<IZustandState>((set: SetState<IZustandState>) => ({
+  ...initialState,
+}));
 
 export default useStore;
