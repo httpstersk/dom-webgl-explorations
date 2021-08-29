@@ -62,14 +62,7 @@ export type Viewport = {
 
 export interface IZustandState extends State {
   allImgs: UnsplashImage[];
-  exp0Imgs: UnsplashImage[];
   exp1Imgs: UnsplashImage[];
-  exp2Imgs: UnsplashImage[];
-  exp3Imgs: UnsplashImage[];
-  exp4Imgs: UnsplashImage[];
-  exp5Imgs: UnsplashImage[];
-  exp6Imgs: UnsplashImage[];
-  exp7Imgs: UnsplashImage[];
   events: unknown;
   initialScale: number;
   router: NextRouter;

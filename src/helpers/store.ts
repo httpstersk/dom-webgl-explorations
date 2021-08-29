@@ -6,16 +6,9 @@ import create, { SetState } from 'zustand';
 
 let store;
 
-const initialState: IZustandState = {
+export const initialState: IZustandState = {
   allImgs: [...bikes, ...buildings, ...food, ...nature, ...portraits],
-  exp0Imgs: pickItems(portraits, 1),
   exp1Imgs: pickItems(portraits, 3),
-  exp2Imgs: pickItems(portraits, 2),
-  exp3Imgs: pickItems(portraits, 1),
-  exp4Imgs: pickItems(portraits, 1),
-  exp5Imgs: pickItems(portraits, 2),
-  exp6Imgs: pickItems(portraits, 1),
-  exp7Imgs: pickItems(portraits, 1),
   events: null,
   initialScale: 0.175,
   router: null,
