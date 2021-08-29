@@ -13,7 +13,7 @@ const Portraits: React.FC<ReactThreeFiberProps> = () => {
 
   const onPortraitPress = useCallback((event, id) => {
     event.stopPropagation();
-    router?.push(`/exp-1/portraits/${id}`);
+    router.push(`/exp-1/portraits/${id}`);
   }, []);
 
   return (

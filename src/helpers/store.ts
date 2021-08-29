@@ -2,7 +2,7 @@ import { bikes, buildings, food, nature, portraits } from '@/constants/images';
 import { IZustandState } from '@/types';
 import { pickItems } from '@/utils';
 import { createRef, useLayoutEffect } from 'react';
-import create from 'zustand';
+import create, { SetState } from 'zustand';
 
 let store;
 
@@ -18,12 +18,12 @@ const initialState: IZustandState = {
   exp7Imgs: pickItems(portraits, 1),
   events: null,
   initialScale: 0.175,
-  router: {},
+  router: null,
   vhMultiplier: 2,
   viewport: { x: 0, y: 0 },
 };
 
-const useStore = create<IZustandState>((set) => {
+const useStore = create<IZustandState>((set: SetState<IZustandState>) => {
   return {
     ...initialState,
   };

@@ -1,3 +1,4 @@
+import { NextRouter } from 'next/router';
 import { Color, Texture, Vector2 } from 'three';
 import { State } from 'zustand';
 
@@ -71,7 +72,7 @@ export interface IZustandState extends State {
   exp7Imgs: UnsplashImage[];
   events: unknown;
   initialScale: number;
-  router: unknown;
+  router: NextRouter;
   vhMultiplier: number;
   viewport: Viewport;
 }

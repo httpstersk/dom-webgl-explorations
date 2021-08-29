@@ -1,8 +1,8 @@
 import Details from '@/components/exp-1/Details';
-import { initializeStore } from '@/helpers/store';
+import useStore, { initializeStore } from '@/helpers/store';
 import Exp1Layout from '@/layouts/exp-1';
 import { UnsplashImage } from '@/types';
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 
 const Page = ({ image }) => {
   return (
@@ -17,9 +17,10 @@ export default Page;
 
 export async function getServerSideProps(context) {
   const store = initializeStore();
-  const image = store
-    .getState()
-    .allImgs.find((img: UnsplashImage) => img._id === Number(context.query.id));
+  const allImgs = useStore((state) => state.allImgs);
+  const image = allImgs.find(
+    (img: UnsplashImage) => img._id === Number(context.query.id),
+  );
 
   return {
     props: {
