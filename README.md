@@ -8,6 +8,8 @@ $ npm install && npm run dev
 
 ---
 
-## Live Versions
+## Live
 
-#### **[`Explorations №1`](https://dom-webgl-explorations.vercel.app/exp-1)**
+#### **[`Exp #1 →`](https://dom-webgl-explorations.vercel.app/exp-1)**
+
+#### **[`Exp #2 →`](https://dom-webgl-explorations.vercel.app/exp-2)**
