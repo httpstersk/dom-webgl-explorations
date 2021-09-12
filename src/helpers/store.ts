@@ -10,6 +10,7 @@ export const initialState: IZustandState = {
   allImgs: [...bikes, ...buildings, ...food, ...nature, ...portraits],
   exp1Imgs: pickItems(portraits, 3),
   exp2Imgs: pickItems(portraits, 2),
+  exp3Imgs: pickItems(portraits, 1),
   events: null,
   initialScale: 0.175,
   router: null,

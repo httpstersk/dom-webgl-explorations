@@ -10,6 +10,4 @@ $ npm install && npm run dev
 
 ## Live
 
-#### **[`Exp #1 →`](https://dom-webgl-explorations.vercel.app/exp-1)**
-
-#### **[`Exp #2 →`](https://dom-webgl-explorations.vercel.app/exp-2)**
+#### **[`Exp #1`](https://dom-webgl-explorations.vercel.app/exp-1)** / **[`Exp #2`](https://dom-webgl-explorations.vercel.app/exp-2)** / **[`Exp #3`](https://dom-webgl-explorations.vercel.app/exp-3)**
