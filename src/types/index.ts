@@ -66,6 +66,7 @@ export interface IZustandState extends State {
   exp2Imgs: UnsplashImage[];
   exp3Imgs: UnsplashImage[];
   exp4Imgs: UnsplashImage[];
+  exp5Imgs: UnsplashImage[];
   events: unknown;
   initialScale: number;
   router: NextRouter;
